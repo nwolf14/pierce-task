@@ -1,28 +1,18 @@
-import PostsDataProvider from './common/components/PostsDataProvider/PostsDataProvider';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { PostsSection } from './components/PostsSection/PostsSection';
-import { CommentsDataProvider } from './common/components/CommentsDataProvider/CommentsDataProvider';
 import { GlobalErrorBoundary } from './common/components/GlobalErrorBoundary/GlobalErrorBoundary';
-import { Container, CssBaseline } from '@mui/material';
+import { HomePage } from './pages/HomePage';
+
 import './App.scss';
 
 const queryClient = new QueryClient();
 
-function App() {
+export const App: React.FC = () => {
   return (
     <GlobalErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        <PostsDataProvider>
-          <CommentsDataProvider>
-            <CssBaseline />
-            <Container maxWidth="lg">
-              <PostsSection />
-            </Container>
-          </CommentsDataProvider>
-        </PostsDataProvider>
+        {/* In normal coditions routing would be added */}
+        <HomePage />
       </QueryClientProvider>
     </GlobalErrorBoundary>
   );
-}
-
-export default App;
+};

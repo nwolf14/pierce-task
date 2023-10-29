@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import { usePostsData } from '../../common/components/PostsDataProvider/PostsDataProvider';
 import { PostList } from './PostList/PostList';
 import { Box, Button } from '@mui/material';
