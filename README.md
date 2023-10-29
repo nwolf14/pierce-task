@@ -45,6 +45,7 @@ Here's what I would do differently in normal production conditions, including bu
 
 - Adding metadata to the page.
 - Creating a `Docker` image to facilitate easy application deployment using `CI/CD`.
+- Create custom `Nginx` HTTP server configuration.
 - Adding test coverage for every file, creating unit tests for code containing business logic, and behavioral tests for testing components themselves.
 - Developing a library of custom components using `Storybook` instead of relying on libraries like Material-UI.
 - Depending on the application's complexity, deciding whether or not to use the `redux/flux` architecture to manage the application state.
