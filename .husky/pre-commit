@@ -5,4 +5,4 @@ npx branch-name-lint
 npx stylelint "**/*.scss"
 npm run eslint-ts
 npm run eslint-tsx
-npm run prettier:check
+npm run prettier:write

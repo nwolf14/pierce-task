@@ -2,11 +2,9 @@ import { Typography } from '@mui/material';
 import React from 'react';
 
 type TErrorScreenProps = {
-    errorMessage: string;
-}
+  errorMessage: string;
+};
 
 export const ErrorScreen: React.FC<TErrorScreenProps> = (props) => {
-    return (
-        <Typography>Error occured: {props.errorMessage}</Typography>
-    )
+  return <Typography>Error occured: {props.errorMessage}</Typography>;
 };
