@@ -1,3 +1,6 @@
-commitlint.config.js
+commitlint.config.cjs
 package.json
+package-lock.json
 tsconfig.json
+tsconfig.node.json
+dist

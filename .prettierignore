@@ -1,4 +1,6 @@
 # Ignore artifacts:
-build
-commitlint.config.js
+dist
+commitlint.config.cjs
 coverage
+package-lock.json
+package.json
