@@ -17,7 +17,13 @@ npm i
 
 2. Create environment file:
 
-Copy and rename `.env.default` to `.env`
+Copy and rename file `.env.default` to `.env`
+
+3. Install Husky
+
+```
+npm run prepare
+```
 
 ## Launch
 
