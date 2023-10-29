@@ -1,47 +1,45 @@
-import React from 'react';
+import * as React from 'react';
 import { GlobalError } from './GlobalError/GlobalError';
 
 interface ErrorBoundaryProps {
-    hasError?: boolean;
-    children: React.ReactNode;
+  hasError?: boolean;
+  children: React.ReactNode;
 }
 
 interface ErrorBoundaryState {
-    hasError: boolean;
-    errorType?: string;
+  hasError: boolean;
+  errorType?: string;
 }
 
 export class GlobalErrorBoundary extends React.PureComponent<ErrorBoundaryProps, ErrorBoundaryState> {
-    constructor(props: ErrorBoundaryProps) {
-        super(props);
-        this.state = {
-            hasError: false,
-        };
-    }
-
-    static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-        // Send error.message to the Sentry or some other monitoring tools
-        return {
-            hasError: true,
-            errorType: error.message,
-        };
-    }
-
-    handleTryAgain = (): void => {
-        this.setState({
-            hasError: false,
-        });
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = {
+      hasError: false,
     };
+  }
 
-    render(): React.ReactNode {
-        const { hasError } = this.state;
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    // Send error.message to the Sentry or some other monitoring tools
+    return {
+      hasError: true,
+      errorType: error.message,
+    };
+  }
 
-        if (hasError) {
-            return (
-                <GlobalError onTryAgainClick={this.handleTryAgain}/>
-            );
-        }
+  handleTryAgain = (): void => {
+    this.setState({
+      hasError: false,
+    });
+  };
 
-        return this.props.children;
+  render(): React.ReactNode {
+    const { hasError } = this.state;
+
+    if (hasError) {
+      return <GlobalError onTryAgainClick={this.handleTryAgain} />;
     }
+
+    return this.props.children;
+  }
 }

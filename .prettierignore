@@ -1,0 +1,6 @@
+# Ignore artifacts:
+dist
+commitlint.config.cjs
+coverage
+package-lock.json
+package.json
