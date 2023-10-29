@@ -41,7 +41,7 @@
     "selector-pseudo-element-no-unknown": true,
     "selector-type-no-unknown": true,
     "shorthand-property-no-redundant-values": true,
-    "unit-allowed-list": ["%", "deg", "fr", "ms", "px", "s", "vh", "vw"],
+    "unit-allowed-list": ["%", "deg", "fr", "ms", "px", "s", "vh", "vw", "rem"],
     "unit-case": "lower",
     "unit-no-unknown": true,
     "value-keyword-case": "lower"
