@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { Box, Card, CardContent, Typography } from '@mui/material';
 import { TPost } from '../../../../common/apis/types/getPosts.types';
 import { PostComment } from './PostComment/PostComment';
