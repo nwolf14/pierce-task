@@ -39,11 +39,11 @@ npm test
 
 ## Designing real production application:
 
-I tried to prepare the above task in a way as close as possible to production conditions. To create the project, I used the `Vite` environment because it is much lighter and faster compared to `create-react-app`. Additionally, I manually configured tools such as `husky`, `jest`, `eslint`, `stylelint`, and `commitlint`.
+To create this project, I used the `Vite` environment because it is much lighter and faster compared to `create-react-app`. Additionally, I manually configured tools such as `husky`, `jest`, `eslint`, `stylelint`, and `commitlint`.
 
 Here's what I would do differently in normal production conditions, including but not limited to:
 
-- Adding metadata to the page.
+- Adding proper metadata to the page.
 - Creating a `Docker` image to facilitate easy application deployment using `CI/CD`.
 - Create custom `Nginx` HTTP server configuration.
 - Adding test coverage for every file, creating unit tests for code containing business logic, and behavioral tests for testing components themselves.
